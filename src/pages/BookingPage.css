@@ -1,0 +1,20 @@
+.booking-page {
+  padding: 2rem 0;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .booking-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.booking-sidebar {
+  position: sticky;
+  top: 2rem;
+}

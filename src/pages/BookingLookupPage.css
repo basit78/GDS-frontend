@@ -1,0 +1,19 @@
+.booking-lookup-page {
+  padding: 2rem 0;
+}
+
+.lookup-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lookup-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}

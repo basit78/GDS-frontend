@@ -1,0 +1,87 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://thumbs.dreamstime.com/b/passenger-airplane-flying-blue-sky-pink-clouds-landing-landscape-white-sunset-travel-background-airliner-100681873.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  max-width: 900px;
+  margin: -3rem auto 3rem;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.features {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .search-container {
+    margin-top: -2rem;
+  }
+}

@@ -1,0 +1,292 @@
+.flight-search-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.flight-search-form .form-control {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  padding-left: 3.5rem !important;
+  /* Increased space for icon */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #1e293b;
+}
+
+.flight-search-form .input-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1.3rem;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+}
+
+.flight-search-form .react-datepicker__input-container input {
+  padding-left: 3.5rem !important;
+}
+
+.flight-search-form .form-control:focus {
+  outline: none;
+  border-color: #5551ff;
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(85, 81, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.flight-search-form .form-control::placeholder {
+  color: #94a3b8;
+}
+
+/* Select Styling */
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+/* Base Grid Adjustment */
+.flight-search-form .grid {
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Airport Search Dropdown Styles */
+.dropdown-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: white;
+  margin-top: 0.5rem;
+  max-height: 18rem;
+  overflow: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  padding: 0.875rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f8fafc;
+}
+
+.dropdown-item-header {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9375rem;
+}
+
+.dropdown-item-sub {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 0.125rem;
+}
+
+/* Search Button */
+.btn-search {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #5551ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(85, 81, 255, 0.2);
+}
+
+.btn-search:hover:not(:disabled) {
+  background-color: #443ef5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(85, 81, 255, 0.3);
+}
+
+.btn-search:active {
+  transform: translateY(0);
+}
+
+.btn-search:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Professional DatePicker (react-datepicker) Overrides */
+.react-datepicker {
+  font-family: 'Inter', sans-serif !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  overflow: hidden !important;
+  background-color: #ffffff !important;
+}
+
+.react-datepicker__header {
+  background-color: #f8fafc !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding-top: 1rem !important;
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+}
+
+.react-datepicker__current-month {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.react-datepicker__day-name {
+  color: #64748b !important;
+  font-weight: 600 !important;
+  width: 2.5rem !important;
+  line-height: 2.5rem !important;
+}
+
+.react-datepicker__day {
+  color: #334155 !important;
+  width: 2.5rem !important;
+  line-height: 2.5rem !important;
+  border-radius: 10px !important;
+  transition: all 0.2s ease !important;
+  margin: 2px !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f1f5f9 !important;
+  color: #5551ff !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #5551ff !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 6px -1px rgba(85, 81, 255, 0.4) !important;
+}
+
+.react-datepicker__day--today {
+  color: #5551ff !important;
+  font-weight: 700 !important;
+}
+
+.react-datepicker__day--disabled {
+  color: #cbd5e1 !important;
+}
+
+.react-datepicker__navigation {
+  top: 1rem !important;
+}
+
+.react-datepicker__navigation--previous {
+  left: 10px !important;
+}
+
+.react-datepicker__navigation--next {
+  right: 10px !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+/* Responsive Grid and Spacing */
+@media (max-width: 1024px) {
+  .flight-search-form .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .flight-search-form .form-control {
+    padding-left: 3rem !important;
+    font-size: 0.9375rem;
+  }
+
+  .flight-search-form .input-icon {
+    left: 1rem;
+    font-size: 1.15rem;
+  }
+
+  .flight-search-form .react-datepicker__input-container input {
+    padding-left: 3rem !important;
+  }
+
+  .react-datepicker {
+    width: 280px !important;
+  }
+
+  .react-datepicker__day-name,
+  .react-datepicker__day {
+    width: 2.2rem !important;
+    line-height: 2.2rem !important;
+  }
+}

@@ -1,0 +1,57 @@
+.flight-summary {
+  width: 100%;
+}
+
+.summary-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.section-icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.section-icon.return {
+  transform: rotate(180deg);
+}
+
+.section-header h4 {
+  margin: 0;
+}
+
+.section-content {
+  padding-left: 1.75rem;
+}
+
+.route {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.date,
+.time,
+.duration {
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+
+.price-summary {
+  margin-top: 1rem;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.price-row.total {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
